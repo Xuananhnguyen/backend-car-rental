@@ -24,8 +24,6 @@ const postCreateUser = async (req, res) => {
         `INSERT INTO Users (email, name, city) VALUES (?, ?, ?) `, [email, name, city]
     );
 
-    console.log(">>>> check results: ", results)
-
     res.send("Created user succeed")
 }
 
@@ -34,6 +32,8 @@ const getCreatePage = (req, res) => {
 }
 
 const getUpdatePage = (req, res) => {
+    const userId = req.params.id;
+    console.log(">>>> req.params: ", req.params, userId)
     res.render('edit.ejs')
 }
 module.exports = {
