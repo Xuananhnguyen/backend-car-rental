@@ -42,7 +42,6 @@
     </div>
     <div class="table-container">
         <div class="title">List Users</div>
-
         <table>
             <thead>
                 <tr>
@@ -50,23 +49,49 @@
                     <th>Email</th>
                     <th>Name</th>
                     <th>City</th>
+                    <th>Action</th>
                 </tr>
             </thead>
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>Adam</td>
-                <td>Johnson</td>
-                <td>67</td>
-            </tr>
+            <!-- <% for (let i=0; i < listUsers.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= listUsers[i].id %>
+                    </td>
+                    <td>
+                        <%= listUsers[i].email %>
+                    </td>
+                    <td>
+                        <%= listUsers[i].name %>
+                    </td>
+                    <td>
+                        <%= listUsers[i].city%>
+                    </td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <% } %> -->
+            <% listUsers.forEach(function(user) { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.city%>
+                    </td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <% }); %>
         </table>
     </div>
 </body>
