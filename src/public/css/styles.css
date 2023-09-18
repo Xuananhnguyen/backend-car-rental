@@ -60,7 +60,7 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
+thead {
     background-color: #04AA6D;
 }
 
